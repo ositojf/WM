@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADM OSITO</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="js/indexdb.js"></script>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+  
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .lik1{
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      
+    }
+
+    </style>
+</head>
+<body >
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success text-bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">ADM OSITO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">INICIO</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">RECARGAS</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="razel.html">RAZEL GOLD</a></li>
+              <li><a class="dropdown-item" href="freefire.html">FREE FIRE</a></li>
+              <li><a class="dropdown-item" href="dota2.html">DOTA 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link active" href="contactos.html">CONTACTOS</a>
+          </li>
+        </ul>
+        <hr class="d-md-none text-white-50">
+        <ul class="navbar-nav  flex-row flex-wrap text-light">
+          <li class="nav-item col-6 col-md-auto p-3" >
+            <a href="https://github.com/ositojf" class="lik1">
+              <i class="bi bi-github"></i>
+              <small class="d-md-none ms-2">GitHub</small> 
+            </a>
+         </li>
+  
+         <li class="nav-item col-6 col-md-auto p-3" >
+          <a href="https://wa.me/59172336050" class="lik1">
+            <i class="bi bi-whatsapp"></i>
+           <small class="d-md-none ms-2">WhatsApp</small>
+          </a>
+         </li>
+  
+         <li class="nav-item col-6 col-md-auto p-3">
+          <a href="https://www.facebook.com/profile.php?id=100050560275835" class="lik1">
+           <i class="bi bi-facebook"></i>
+           <small class="d-md-none ms-2">Facebook</small>
+          </a>
+         </li>
+      </ul>
+      </div>
+    </div>
+  </nav><br><br><br><br><br>
+
+    <main class="container">
+      <div class="row mb-2">
+        <div class="col-md-6">
+          
+            <div class="containert" >
+              <div class="card1" style="background-color:rgb(255, 255, 255) ;">
+                <img src="img/gp.png">
+                <h5 >GRUPO DE WHATSAPP</h5>
+                <div>
+                  <button type="button" class="btn btn-outline-success">Unirme</button>  
+                </div>
+              </div>
+            </div><br><br><br>
+            
+          
+  
+        </div>
+        
+        <div class="col-md-6">
+          <form class="p-4 p-md-5 border rounded-3 bg-transparent">
+            
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="txtNombre" >
+              <label for="floatingInput">Nombre</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="txtApellido" >
+              <label for="floatingInput">Apellido</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="txtnumero" >
+              <label for="floatingInput">Celular</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="txtemeil">
+              <label for="floatingInput">Correo</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="txtcontra" >
+              <label for="floatingPassword">contra</label>
+            </div>
+            
+            <button onclick="guardar()" class="w-100 btn btn-lg btn-outline-success" type="button">GUARDAR</button><br><br>
+            <button onclick="listar()" class="w-100 btn btn-lg btn-outline-info" type="button">LISTAR</button><br><br>
+            <button onclick="editar()" class="w-100 btn btn-lg btn-outline-danger" type="button">EDITAR</button><br><br>
+            
+          </form>
+        </div>
+      </div><br>
+  
+      <div class="p-4 p-md-5 mb-4 text-white rounded bg-transparent">
+        <div class="col-xxl-lg">
+          <ul class="list-group" id="mostrarLista">
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+<script>
+  var PersonaId = 0;
+  function guardar(){
+      //guardar la informacion
+      var persona ={
+          idPersona: Math.floor(100000 + Math.random() * 900000),
+          nombre: document.getElementById('txtNombre').value,
+          apellido: document.getElementById('txtApellido').value,
+          numero: document.getElementById('txtnumero').value,
+          correo: document.getElementById('txtemeil').value,
+          contra: document.getElementById('txtcontra').value
+      }
+      var transaccion = db.transaction("persona", "readwrite");
+      const objetoPersona = transaccion.objectStore('persona');
+      const cargarInfo= objetoPersona.add(persona);
+      console.log("Se ha guardado el objeto");
+      //-----------------------------------------------------------
+      var compra ={
+          idPersona: persona['idPersona'],
+          idCompras: Math.floor(100000 + Math.random() * 900000)
+      }
+      var transaccion2 = db.transaction("compras", "readwrite");
+      const objetoCompras = transaccion2.objectStore('compras');
+      const cargarInfoCompras= objetoCompras.add(compra);
+      
+  }
+
+  function listar(){
+    var lista = document.getElementById("mostrarLista");
+    lista.innerHTML= "";
+    db = dbConnection.result;
+    // lectura de tablas
+    var transaccion = db.transaction("persona", "readonly");
+    const objeto = transaccion.objectStore('persona');
+    // iterar los elementos
+    const cursor = objeto.openCursor();
+    cursor.onsuccess = (e) =>{
+        const c = e.target.result;
+         if (c){
+            var parametro = {
+              idPersona: c.value['idPersona'],
+              nombre: c.value['nombre'],
+              apellido: c.value['apellido'],
+              numero: c.value['numero'],
+              correo: c.value['correo'],
+              contra: c.value['contra']
+            }
+            console.log(parametro);
+            // insertando en el html de UL, se realizo algunas concatenaciones adicionales
+            lista.innerHTML += "<li class='list-group-item'>"
+              +c.value['nombre']+' '
+              +c.value['apellido']+' '
+              +c.value['numero']+' '
+              +c.value['correo']+' '
+              +c.value['contra']+" <button type='button' onclick='eliminar("
+              +c.value['idPersona']+")' class='btn btn-danger'>Eliminar</button></li>&nbsp<button type='button' onclick='ver("+JSON.stringify(parametro)+")' class='btn btn-success'>Ver</button>";
+            c.continue();
+        } else {
+            console.log("no tiene datos");
+        }
+    }
+  }
+
+  function ver (persona){
+    PersonaId = persona['idPersona'];
+    document.getElementById('txtNombre').value = persona['nombre'];
+    document.getElementById('txtApellido').value = persona['apellido'];
+    document.getElementById('txtnumero').value = persona['numero'];
+    document.getElementById('txtemeil').value = persona['correo'];
+    document.getElementById('txtcontra').value = persona['contra']
+  }
+  function editar(){
+    var persona ={
+          idPersona: PersonaId,
+          nombre: document.getElementById('txtNombre').value,
+          apellido: document.getElementById('txtApellido').value,
+          numero: document.getElementById('txtnumero').value,
+          correo: document.getElementById('txtemeil').value,
+          contra: document.getElementById('txtcontra').value
+      }
+    var transaccion = db.transaction("persona", "readwrite");
+    const objeto = transaccion.objectStore('persona');
+    // insertar en el objeto
+    const actualizarInfo= objeto.put(persona);
+    if (actualizarInfo)
+        console.log("Se agrego con exito", actualizarInfo );
+  }
+  function eliminar(idPersona){
+    var transaccion = db.transaction("persona", "readwrite");
+    const objeto = transaccion.objectStore('persona');
+    // insertar en el objeto
+    const eliminado = objeto.delete(idPersona);
+    eliminado.onsuccess = () => {
+        listar();
+    }
+    eliminado.onerror = (error) => {
+        console.log(error);
+    }
+  }
+</script>
